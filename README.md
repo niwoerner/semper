@@ -14,6 +14,15 @@ Set `OPENAI_API_KEY` in your environment, then build both packages and run the q
 npm run start
 ```
 
+Build and lint all packages without running the quickstart:
+
+```sh
+npm run build
+npm run lint
+```
+
+`npm run lint:fix` applies available automatic fixes. Oxlint uses the shared `base` preset from `@niwoerner/oxlint-rules`, configured at the repository root. GitHub Actions runs installation, build, and lint checks on pull requests to `main` using GitHub-hosted Ubuntu runners.
+
 ## Packages
 
 - `@semper/agent-core`: the unmodified pi-durable quickstart. Its entry point executes the example, including when imported.

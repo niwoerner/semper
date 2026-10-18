@@ -8,11 +8,22 @@
     "node": ">=22.19.0"
   },
   "scripts": {
-    "start": "tsc -b && node packages/agent-core/dist/index.js"
+    "start": "tsc -b && node packages/agent-core/dist/index.js",
+    "build": "tsc -b",
+    "lint": "oxlint --deny-warnings",
+    "lint:fix": "oxlint --fix"
   },
   "devDependencies": {
+    "@niwoerner/oxlint-rules": "0.0.6",
     "@types/node": "22.20.5",
+    "oxfmt": "0.66.0",
+    "oxlint": "1.88.0",
     "typescript": "7.0.2"
+  },
+  "overrides": {
+    "oxfmt": {
+      "tinypool": "2.1.2"
+    }
   },
   "workspaces": [
     "packages/*"
