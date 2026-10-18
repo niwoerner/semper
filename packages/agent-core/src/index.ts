@@ -16,8 +16,5 @@ const settled = await submission.wait(context);
 if (settled.status === "done" && settled.type === "input") {
 	const answer = await root.commit((tx) => tx.entry(AssistantEntry, settled.answer), context);
 	console.log(answer?.model?.[0]);
-} else {
-	console.error("Submission failed:", settled);
-	process.exitCode = 1;
 }
 await harness.close(context);

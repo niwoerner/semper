@@ -8,15 +8,13 @@
     "node": ">=22.19.0"
   },
   "scripts": {
-    "start": "tsc && node dist/index.js"
-  },
-  "dependencies": {
-    "@earendil-works/chord": "1.3.0",
-    "@earendil-works/pi-ai": "1.3.0",
-    "@earendil-works/pi-durable": "1.3.0"
+    "start": "tsc -b && node packages/agent-core/dist/index.js"
   },
   "devDependencies": {
     "@types/node": "22.20.5",
     "typescript": "7.0.2"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
